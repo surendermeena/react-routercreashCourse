@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div className="text-white">
-      
-      Hello world
+
+      Home page
 
     </div>
   )

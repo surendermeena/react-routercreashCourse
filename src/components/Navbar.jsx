@@ -10,6 +10,7 @@ const Navbar = () => {
       <nav className='text-center space-x-4'>
         <Link to='/' >Home</Link>
         <Link to='/about' >About</Link>
+        <Link to='/vans' >Vans</Link>
       </nav>
 
 
