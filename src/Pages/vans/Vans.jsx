@@ -42,7 +42,7 @@ const Vans = () => {
     return (
         <div className='h-screen flex flex-col'>
             <h1>Explore Van Options</h1>
-            <div className='flex justify-around  h-full  '>
+            <div className='flex justify-around    '>
                 {
                     vansElements
                 }

@@ -30,7 +30,7 @@ const VanDetails = () => {
     const vansElement = (
         <div key={vanData.id} className='border p-2 max-w-[400px] h-[500px]  max-h-[600px]   hover:shadow-gray-500 hover:shadow-lg'>
 
-            <Link to={vanData.id}>
+            <Link  >
                 <h2 className='text-center'> {vanData.name} </h2>
                 <div>
                     <img src={vanData.imageUrl} className='rounded-lg' alt="" height={150} width={150} />

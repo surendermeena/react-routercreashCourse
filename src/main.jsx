@@ -9,8 +9,8 @@ import Dashboard from "./Pages/Host/Dashboard.jsx"
 import Review from "./Pages/Host/Reviews.jsx"
 import Income from "./Pages/Host/Income.jsx"
 import "./server.js"
-import Vans from './Pages/Vans.jsx'
-import VanDetails from './Pages/VanDetails.jsx'
+import Vans from './Pages/vans/Vans.jsx'
+import VanDetails from './Pages/vans/VanDetails.jsx'
 import Layout from './components/Layout.jsx'
 import HostLayout from './components/HostLayout.jsx'
 
@@ -24,10 +24,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes >
       <Route path='/' element={<Layout />}>
         <Route index element={<App />} />
-        <Route path='/vans' element={<Vans />} />
-        
-        <Route path='/vans/:id' element={<VanDetails />} />
-        <Route path='/about' element={<About />} />
+
+
+
+        <Route path='vans'>
+          <Route index element={<Vans />} />
+          <Route path=':id' element={<VanDetails />} />
+        </Route>
+
+
+        <Route path='about' element={<About />} />
 
         <Route path='host' element={<HostLayout />} >
           <Route index element={<Dashboard />} />

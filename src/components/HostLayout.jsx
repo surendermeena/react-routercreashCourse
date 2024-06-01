@@ -5,7 +5,7 @@ const HostLayout = () => {
     return (
         <div>
             This is Host Layout
-            <nav className='border flex  px-4 py-2  '>
+            <nav className='border flex  py-2 mx-auto '>
                 <Link to="/host"
                     className='hover:font-extrabold hover:shadow-sm rounded-lg p-2 hover:shadow-white'
                 > Dashboard </Link >
