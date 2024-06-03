@@ -13,6 +13,8 @@ import Vans from './Pages/vans/Vans.jsx'
 import VanDetails from './Pages/vans/VanDetails.jsx'
 import Layout from './components/Layout.jsx'
 import HostLayout from './components/HostLayout.jsx'
+import HostVans from "./Pages/Host/HostVans.jsx"
+import HostVanDetails from './Pages/Host/HostVanDetails.jsx'
 
 
 
@@ -39,6 +41,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Dashboard />} />
           <Route path='income' element={<Income />} />
           <Route path='reviews' element={<Review />} />
+          <Route path='vans' element={<HostVans />} />
+          <Route path='vans/:id' element={<HostVanDetails />} />
         </Route>
 
         <Route path='*' element={<Error />} />

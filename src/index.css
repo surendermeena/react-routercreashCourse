@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-link {
+    color: #7ca7b6;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: red;
+}

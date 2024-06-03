@@ -5,6 +5,8 @@ const Dashboard = () => {
   return (
     <div>
       This is Host Dashboard Page
+      <p>This is new Page updates</p>
+      
       
     </div>
   )

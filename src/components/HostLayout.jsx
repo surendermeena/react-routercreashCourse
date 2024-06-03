@@ -1,26 +1,55 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 const HostLayout = () => {
-    return (
-        <div>
-            This is Host Layout
-            <nav className='border flex  py-2 mx-auto '>
-                <Link to="/host"
-                    className='hover:font-extrabold hover:shadow-sm rounded-lg p-2 hover:shadow-white'
-                > Dashboard </Link >
-                <Link to="income"
-                    className='hover:font-extrabold hover:shadow-sm rounded-lg p-2 hover:shadow-white'
-                > Income </Link >
-                <Link to="reviews"
-                    className='hover:font-extrabold  hover:shadow-sm  rounded-lg p-2 hover:shadow-white'
-                > Reviews </Link >
-            </nav>
+  const activeStyles = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+    color: "#7ca7b6",
+  };
+  return (
+    <div>
+      This is Host Layout
+      <nav className="border flex  py-2 mx-auto ">
+        <NavLink
+          to="/host"
+          end
+          className="rounded-lg p-2 "
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          {" "}
+          Dashboard{" "}
+        </NavLink>
 
+        <NavLink
+          to="income"
+          className="rounded-lg p-2 "
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          {" "}
+          Income{" "}
+        </NavLink>
 
-            <Outlet />
-        </div>
-    )
-}
+        <NavLink
+          to="reviews"
+          className="rounded-lg p-2 "
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          {" "}
+          Reviews{" "}
+        </NavLink>
+        <NavLink
+          to="vans"
+          className="rounded-lg p-2 "
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          {" "}
+          Vans{" "}
+        </NavLink>
+      </nav>
+      <Outlet />
+    </div>
+  );
+};
 
-export default HostLayout
+export default HostLayout;
